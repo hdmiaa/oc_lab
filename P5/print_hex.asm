@@ -1,4 +1,4 @@
-%include "pc_iox.inc"
+%include "../LIB/pc_iox.inc"
 
 section	.text
 
@@ -12,7 +12,7 @@ _start:                     ;tell linker entry point
 	mov al,10	; cambio de linea
 	call putchar
 
-	mov ax,0x12ab 	; presenta en pantalla 12AB
+	mov ax,0x15bc 	; presenta en pantalla 12AB
 	call pHex_w
 
 	mov al,10 	; cambio de linea
@@ -24,7 +24,7 @@ _start:                     ;tell linker entry point
 	mov al,0x0a	  ; cambio de lines 10 decimal o bien 0A hex
 	call putchar
 
-	mov eax,0x76543210 ; presenta en pantalla 76543210
+	mov eax,0x12050600 ; presenta en pantalla 76543210
         call pHex_dw
 
 	mov al,10       ; cambio de linea
@@ -32,4 +32,3 @@ _start:                     ;tell linker entry point
 
 	mov eax, 1	;system call number (sys_exit) -- fin del programa
 	int 0x80        ;call kernel
-
