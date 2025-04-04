@@ -1,9 +1,9 @@
 %include "../LIB/pc_iox.inc"
 
 section	.text
-	global _start       ;must be declared for using gcc
+	global _start      
 
-_start:                     ;tell linker entry point
+_start:                     
 
 	mov ebx, 0x5C4B2A60 ; Valor inicial en EBX (5C4B2A60)
 	mov eax, 0x02210784   ;agrega un valor a eax (mi matricula)
@@ -39,7 +39,7 @@ _start:                     ;tell linker entry point
     mov al, 10           ; Cambio de línea 
     call putchar
 
-	mov ax, 0xFF
+	mov ax, 0xFF		;
 	div bx
 	
 	call pHex_w
