@@ -11,4 +11,9 @@
 	extern pHex_w
 	extern pHex_dw
 
+	extern pBin_n 
+    extern pBin_b 
+    extern pBin_w
+    extern pBin_dw
+
 ;********************* fin *********************************************
