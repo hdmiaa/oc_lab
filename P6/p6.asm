@@ -7,13 +7,18 @@ section .text
 
     mov eax, 0x22446688     ;inciso a      
     ror eax, 1
-
-    call        
+    call pBin_dw  
    
     mov al, 10              ;salto de linea
-	call pBin_dw            ; imprime en binario 
+	call putchar            
 
-    mov cx, 0x3F48
+    mov cx, 0x3F48          ;inciso b
+    shl cx, 3
+    mov ax, cx
+    call pBin_w
+
+    mov al, 10              ;salto de linea
+	call putchar            ; imprime en binario 
 
 
 	mov eax, 1          ; sys_exit (termina el programa)
