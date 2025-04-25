@@ -1,4 +1,4 @@
-%include "../LIB/libpc_iox.a"
+%include "../LIB/libpc_iox.inc" ;cabeceras no bibliotecas
 
 section .text
     global _start
