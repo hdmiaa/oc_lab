@@ -4,7 +4,6 @@ section .text
     global _start
 
 _start:
-
 inicio:
     call getche         ; Captura un carácter 
 

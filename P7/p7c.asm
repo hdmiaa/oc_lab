@@ -4,20 +4,30 @@ section .text
     global _start
 
 _start:
-    call getche
-    mov al, cx        
+    bucle:
+	call getche
 
-print_asteriscos:
-    cmp cx, 0
-    je fin
-    mov al, '*'
-    call putc
-    loop print_asteriscos
+	cmp al, '0'
+	jb bucle
+	cmp al, '9'
+	ja bucle
 
-    ; Salto de línea
-    mov al, 10
-    call putc
+	sub al, '0'
+	mov cl, al
 
-fin:
+	mov al, 10
+	call putchar
+
+loop:
+	cmp cl, 0
+	je fin
+
+	mov al, '*'
+	call putchar
+
+	dec cl
+	jmp loop
+
+    fin:
     mov eax, 1
     int 0x80
