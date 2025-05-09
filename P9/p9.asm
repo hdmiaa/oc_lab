@@ -47,17 +47,9 @@ fin:
 strchr: 
     push ebp 
     mov ebp, esp 
-
     mov eax, [ebp + 8]     ;puntero
     mov dl, [epb + 12]     ;caracter a buscar 
 
-
-
-
-;sin_encontar:
-   ; xor eax, eax ;retorna cero 
-   ; pop ebp 
-    ;ret
 
 ;int getBit( int value, int numbit);
 
