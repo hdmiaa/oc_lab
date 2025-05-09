@@ -27,29 +27,26 @@ strlen:
     push ebp 
     mov ebp, esp 
 
-    mov eax, [ecx + 8]
-    xor edx, edx
+    mov eax, [ebp + 8]
+    xor ecx, ecx
 
 next:
-    cmp byte [eax + edx], 0
+    cmp byte [eax], 0
     je .fin
-    inc edx
+    inc eax
+    inc ecx
     jmp .next
 
 fin: 
     mov eax, edx
     push ebp 
-    mov ebp, esp
+    mov ebp, esp 
 
 ;char *strchr( char *str, int c)
 
 strchr: 
     push ebp 
     mov ebp, esp 
-
-
-
-
 
 
 ;int getBit( int value, int numbit);
