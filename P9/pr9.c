@@ -10,9 +10,10 @@ int resultado;
 
 int main()
 {
- 
-   printf("En biy %d del dato: %x es %d \n", 0, dato, getBit(dato, num_bit));
    printf("El resultado de la suma de los dos numeros es: %d", resultado);
-   printf("Buscar un caracter: ")
+   printf("Buscar un caracter: ");
+   printf 
+   printf("En biy %d del dato: %x es %d \n", 0, dato, getBit(dato, num_bit));
+
    return 0;
 }

@@ -51,24 +51,13 @@ strchr:
     mov eax, [ebp + 8]     ;puntero
     mov dl, [epb + 12]     ;caracter a buscar 
 
-puntero:
-    mov bl, [eax] 
-    cmp bl, 0
-    je  .sin_encontrar
-    cmp bl, dl
-    je .encontro
-    inc eax
-    jmp .puntero
-
-encontro: 
-    pop ebp     ;retorna lo encontrado 
-    ret 
 
 
-sin_encontar:
-    xor eax, eax ;retorna cero 
-    pop ebp 
-    ret
+
+;sin_encontar:
+   ; xor eax, eax ;retorna cero 
+   ; pop ebp 
+    ;ret
 
 ;int getBit( int value, int numbit);
 
