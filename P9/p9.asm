@@ -3,7 +3,7 @@ section .text:
     global suma     ;inciso a
     global strlen   ;inciso b
     global strchr   ;inciso c
-    global getB     ;inciso d
+    global getBit     ;inciso d
     global _start
 
 _start: 
@@ -38,9 +38,9 @@ next:
     jmp .next
 
 fin: 
-    mov eax, edx
-    push ebp 
-    mov ebp, esp 
+    mov eax, ecx
+    pop ebp 
+    ret
 
 ;char *strchr( char *str, int c)
 
@@ -48,10 +48,31 @@ strchr:
     push ebp 
     mov ebp, esp 
 
+    mov eax, [ebp + 8]     ;puntero
+    mov dl, [epb + 12]     ;caracter a buscar 
+
+puntero:
+    mov bl, [eax] 
+    cmp bl, 0
+    je  .sin_encontrar
+    cmp bl, dl
+    je .encontro
+    inc eax
+    jmp .puntero
+
+encontro: 
+    pop ebp     ;retorna lo encontrado 
+    ret 
+
+
+sin_encontar:
+    xor eax, eax ;retorna cero 
+    pop ebp 
+    ret
 
 ;int getBit( int value, int numbit);
 
-getB: 
+getBit: 
     push ebp
     mov ebp, esp
 
