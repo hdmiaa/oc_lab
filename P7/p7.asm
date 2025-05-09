@@ -18,13 +18,11 @@ inicio:
     jb menor
 
 mayor_igual:
-
     mov edx, msg_mayor   ; Mostrar "Mayor o igual a 5"
     call puts
     jmp fin
 
 menor:
-
     mov edx, msg_menor  ; Mostrar "Menor a 5"
     call puts
 
