@@ -33,7 +33,6 @@ strlen:
 next:
     cmp byte [eax], 0
     je .fin
-    inc eax
     inc ecx
     jmp .next
 
